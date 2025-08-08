@@ -1,0 +1,114 @@
+/* -----------------  Global Reset  ----------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* -----------------  Base Styles  ----------------- */
+  html {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    html { font-size: 15px; }
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+      Arial, sans-serif;
+    line-height: 1.6;
+    background: #0076ba;     /* Praesium blue */
+    color: #fff;
+  }
+
+  .section-alt {
+    background: #f1f5f9;
+    color: #111;
+    border-radius: 48px; /* ← Super round corners */
+    padding: 60px 20px;
+    margin: 40px 0; /* Adds spacing around the rounded section */
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Optional: adds subtle depth */
+  }
+  
+  /* Center all content & prevent “zoomed-in” look */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* -----------------  Hero Section  ----------------- */
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+  }
+  .hero.parallax {
+    /* replace with your own subtle background */
+    background: url('hero-bg.jpg') center/cover fixed;
+  }
+  .hero-logo { width: 300px; margin-bottom: -10px; }
+  .hero-logo.no-round { border-radius: 0; box-shadow: none; }
+  .hero-title   { font-size: 2.8rem; margin-bottom: 15px; }
+  .hero-subtitle{
+    font-size: 1.25rem; margin: 0 auto 30px; max-width: 600px;
+  }
+  .hero-button{
+    background:#fff; color:#0076ba; padding:12px 28px;border-radius:30px;
+    font-weight:700; text-decoration:none; transition:background .3s;
+  }
+  .hero-button:hover{ background:#e6f5ff; }
+  
+  /* -----------------  Generic Section Blocks  ----------------- */
+  .section{
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+    padding:60px 20px;
+  }
+  .section-alt{ background:#f1f5f9; color:#111; }
+  .section-alt .text-block h2,
+  .section-alt .text-block p{ color:#0076ba; }
+  
+  /* Text and Image columns */
+  .text-block{ flex:1 1 400px; max-width:600px; padding:20px; }
+  .image-block{
+    flex:1 1 300px; max-width:350px; padding:20px;
+    border-radius:24px; overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+  }
+  
+  /* -----------------  Lists  ----------------- */
+  ul{ list-style:none; margin-top:20px; }
+  ul li{ margin-bottom:10px; font-size:1.1rem; }
+  
+  /* -----------------  Call-to-Action  ----------------- */
+  .cta{
+    text-align:center; padding:60px 20px; background:#0076ba; color:#fff;
+  }
+  .cta-button{
+    display:inline-block; margin-top:20px; background:#fff; color:#0076ba;
+    padding:12px 28px; border-radius:30px; font-weight:700;
+    text-decoration:none; transition:background .3s;
+  }
+  .cta-button:hover{ background:#e6f5ff; }
+  
+  /* -----------------  Footer  ----------------- */
+  .footer{
+    text-align:center; padding:30px 20px; font-size:.9rem;
+    background:#f0f0f0; color:#666;
+  }
+  
+  /* -----------------  Parallax Helper  ----------------- */
+  .parallax{
+    background-attachment:fixed;
+    background-size:cover;
+    background-position:center;
+  }
+  
+  /* -----------------  Fade-in on Scroll  ----------------- */
+  .fade{
+    opacity:0; transform:translateY(30px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .show{ opacity:1; transform:translateY(0); }
+  
