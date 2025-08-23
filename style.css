@@ -162,9 +162,26 @@ ul li {
   transform: translateY(0); 
 }
 
+/* keep these */
 .logo-item.stanford { height: 80px; }
-.logo-item.yc       { height: 180px; }  /* bigger YC logo */
 .logo-item.genesis  { height: 100px; }
+
+/* swap this (remove your old 180px) */
+.logo-item.yc {
+  height: 100px;              /* same layout height as Genesis */
+  transform: scale(1.4);      /* visually bigger, no reflow */
+  transform-origin: center;
+}
+
+/* helpful base/row styles (optional but nice) */
+.logo-item { display: block; object-fit: contain; }
+.logo-row  { display: flex; align-items: center; gap: 16px; }
+
+/* tame it on very small screens */
+@media (max-width: 480px) {
+  .logo-item.yc { transform: scale(1.2); }
+}
+
 
 /* ===== Extra polish features ===== */
 
